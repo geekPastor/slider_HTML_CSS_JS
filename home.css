@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.parent{
+    height: 70vh;
+    width: 50%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.parent .photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.parent .photo.actve{
+    opacity: 1;
+} 
+
+.direction{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.direction button{
+    width: 70px;
+    height: 100%;
+    background: crimson;
+    border: none;
+    color: antiquewhite;
+    transition: all 1s ease;
+}
+
+.direction button:hover{
+    background: transparent;
+    color: crimson;
+    border: 1px solid crimson;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    body{
+        width: 100%;
+    }
+
+    .direction{
+        width: 100%;
+    }
+}
